@@ -1,4 +1,4 @@
-package serveurbroadcast;
+package broadcastlist.serveur;
 
 import java.util.*;
 
@@ -39,7 +39,7 @@ public class ListeDeDiffusion {
 	}
 
   /* ================== METHODs ================== */
-  
+
 
   /* ================== GETTERs & SETTERs ================== */
 

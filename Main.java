@@ -1,12 +1,16 @@
 import java.net.ServerSocket;
-import serveurbroadcast.*;
+import broadcastlist.serveur.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Main {
 
   public static void main(String[] args) {
 
-    Serveur serveur = new Serveur(Serveur.port, 1);
-    serveur.manageDiffusion();
+    System.getProperties().put("java.protocol.handler.pkgs", "diff");
+    ExecutorService pool = Executors.newFixedThreadPool(1);
+    Thread serveur = new Thread(new Serveur(Serveur.port, pool));
+    serveur.start();
 
   }
 
