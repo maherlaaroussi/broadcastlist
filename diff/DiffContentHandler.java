@@ -1,4 +1,4 @@
-package broadcastlist.diff;
+package diff;
 
 import java.net.*;
 import java.io.*;

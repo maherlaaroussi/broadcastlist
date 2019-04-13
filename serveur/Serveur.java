@@ -1,4 +1,4 @@
-package broadcastlist.serveur;
+package serveur;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import broadcastlist.serveur.ListeDeDiffusion.Theme;
+import serveur.ListeDeDiffusion.Theme;
 
 public class Serveur implements Runnable {
 

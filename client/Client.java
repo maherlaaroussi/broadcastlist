@@ -1,4 +1,4 @@
-package clientbroadcast;
+package client;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -10,13 +10,13 @@ public class Client {
 
   public static void main(String[] args) throws IOException {
 
-    Socket connexion = new Socket(InetAddress.getLocalHost(),33333);
+    Socket connexion = new Socket(InetAddress.getLocalHost(), 33333);
     Writer output = new OutputStreamWriter(
-    connexion.getOutputStream(), "8859_1");
+    connexion.getOutputStream());
 
-    output.write("Créer 12476389");
+    output.write("Test 12476389");
     output.flush();
-    
+
     connexion.shutdownOutput();
 
   }

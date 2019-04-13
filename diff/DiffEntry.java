@@ -1,4 +1,4 @@
-package broadcastlist.diff;
+package diff;
 
 public class DiffEntry {
 

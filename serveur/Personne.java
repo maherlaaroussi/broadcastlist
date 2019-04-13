@@ -1,4 +1,4 @@
-package broadcastlist.serveur;
+package serveur;
 
 import java.util.*;
 import java.util.regex.*;

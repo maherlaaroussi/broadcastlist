@@ -1,6 +1,6 @@
-package broadcastlist.serveur;
+package serveur;
 
-import broadcastlist.diff.DiffEntry;
+import diff.DiffEntry;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,14 +27,14 @@ public class Esclave implements Runnable {
   private final Socket client;
   URL url;
   PrintWriter pw;
-  BufferedReader read;
+  BufferedReader reader;
 
 
   /* ================== CONSTRUCTORs ================== */
 
   Esclave(Socket client) throws IOException {
     this.client = client;
-    read = new BufferedReader(new InputStreamReader(client.getInputStream()));
+    reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
     pw = new PrintWriter(new OutputStreamWriter(client.getOutputStream()));
   }
 
@@ -51,8 +51,9 @@ public class Esclave implements Runnable {
 
       try {
 
-        while ((req = read.readLine()) != null) {
+        while ((req = reader.readLine()) != null) {
 
+          System.out.println("[REQUEST] " + req);
           url = new URL(req);
 
           try { data = (DiffEntry) url.getContent(); }
@@ -85,7 +86,7 @@ public class Esclave implements Runnable {
         }
 
       } catch (IOException e) {
-        
+
         pw.println("format d'url incorrect !");
         pw.flush();
 
