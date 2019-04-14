@@ -1,4 +1,4 @@
-package diff;
+package pro.diff;
 
 public class DiffEntry {
 

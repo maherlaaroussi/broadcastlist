@@ -1,7 +1,7 @@
-package diff;
+package pro.diff;
 import java.net.*;
 
-class DiffContentHandlerFactory implements ContentHandlerFactory {
+public class DiffContentHandlerFactory implements ContentHandlerFactory {
 
 	public DiffContentHandlerFactory() {
 	}

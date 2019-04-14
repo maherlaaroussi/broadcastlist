@@ -1,12 +1,9 @@
-package diff;
+package pro.diff;
 
 import java.net.*;
 import java.io.*;
 
 public class DiffContentHandler extends ContentHandler {
-
-	String queryValue = "";
-	String resultValue = "";
 
 	public Object getContent(URLConnection urlc) throws IOException {
 
